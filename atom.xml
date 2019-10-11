@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-09T10:36:22.602Z</updated>
+  <updated>2019-10-10T16:29:36.422Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>css渐变</title>
+    <link href="http://yoursite.com/2019/10/10/2019-10-10-hexo/"/>
+    <id>http://yoursite.com/2019/10/10/2019-10-10-hexo/</id>
+    <published>2019-10-10T14:20:54.722Z</published>
+    <updated>2019-10-10T16:29:36.422Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="线性渐变-linear-gradient"><a href="#线性渐变-linear-gradient" class="headerlink" title="线性渐变 linear-gradient"></a>线性渐变 linear-gradient</h5><p>linear-gradient(渐变方向， start color, …, end color)<br>渐变方向可以用角度(deg)表示，也可以用to left、to light … 等表示</p><h5 id="径向渐变-radial-gradient"><a href="#径向渐变-radial-gradient" class="headerlink" title="径向渐变 radial-gradient"></a>径向渐变 radial-gradient</h5><p>radial-gradient(渐变方向， start color, …, end color)<br>渐变方向可以用角度(deg)表示，也可以用to left、to light … 等表示</p><h5 id="练习例子"><a href="#练习例子" class="headerlink" title="练习例子"></a>练习例子</h5><p>一个线性渐变动画的小例子</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># html </span><br><span class="line">&lt;div class=&quot;gradient-bg&quot;&gt;渐变&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"># css</span><br><span class="line">.gradient-bg &#123;</span><br><span class="line">  text-align: center;</span><br><span class="line">  height: 100%;</span><br><span class="line">  background: linear-gradient(135deg, red,orange, purple) right center/400% 400%;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">  font-size: 100px;</span><br><span class="line">  color: #000;</span><br><span class="line">  animation: move 10s infinite;</span><br><span class="line">&#125;</span><br><span class="line">@keyframes move &#123;</span><br><span class="line">  0%,</span><br><span class="line">  100% &#123;</span><br><span class="line">      background-position-x: left;</span><br><span class="line">  &#125;</span><br><span class="line">  50% &#123;</span><br><span class="line">    background-position-x: right;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h5 id=&quot;线性渐变-linear-gradient&quot;&gt;&lt;a href=&quot;#线性渐变-linear-gradient&quot; class=&quot;headerlink&quot; title=&quot;线性渐变 linear-gradient&quot;&gt;&lt;/a&gt;线性渐变 linear-gradient&lt;/h5&gt;&lt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>使用Hexo搭建博客</title>
     <link href="http://yoursite.com/2019/10/08/2019-10-09-hexo/"/>
     <id>http://yoursite.com/2019/10/08/2019-10-09-hexo/</id>
     <published>2019-10-08T02:45:34.538Z</published>
-    <updated>2019-10-09T10:36:22.602Z</updated>
+    <updated>2019-10-10T14:19:01.548Z</updated>
     
-    <content type="html"><![CDATA[<h6 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h6><p>我参考的这篇<a href="https://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">安装教程</a></p><h6 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 生成新页面/文章</span><br><span class="line">hexo new <span class="string">'newFile'</span>  // <span class="built_in">source</span>/_post 文件夹下创建一个文件，命名为：newFile.md</span><br><span class="line">hexo new page <span class="string">'newFile'</span>  // <span class="built_in">source</span> 文件夹下创建一个名为newFile的文件夹，文件夹下的index.md为页面内容</span><br><span class="line"></span><br><span class="line">// 构建静态文件</span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">// 启动服务</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h6 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h6><p>我参考的这篇<a href="https://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">安装教程</a></p><h6 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成新页面|文章</span></span><br><span class="line">hexo new <span class="string">'newFile'</span>         // 会在<span class="built_in">source</span>/_post 文件夹下创建一个名为newFile.md的文件</span><br><span class="line">hexo new page <span class="string">'newFile'</span>    // <span class="built_in">source</span> 文件夹下创建一个名为newFile的文件夹，文件夹下的index.md为页面内容</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建静态文件</span></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动服务</span></span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传到GitHub</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
